@@ -5,7 +5,6 @@ const app = express();
 
 const user = require("../controller/userController");
 const checkUserToken = require("../middleware/userMiddleware");
-const googleAuth = require("../middleware/googleAuth");
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
@@ -14,7 +13,6 @@ app.use(cookieParser());
 app.get("/products", user.getAllProducts);
 
 app.post("/login", user.userLogin);
-// app.get("/googlelogin", googleAuth);
 app.post("/logout", user.userLogout);
 app.post("/register", user.userRegister);
 app.get("/products", checkUserToken, user.getProducts);
