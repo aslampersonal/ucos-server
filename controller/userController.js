@@ -12,7 +12,7 @@ const schema = require("../models/userModel");
 const secretKey = process.env.SECRET_KEY;
 
 //for encrypting password using bcrypt
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const saltRounds = 10;
 
 // Configure cookie parsing middleware
