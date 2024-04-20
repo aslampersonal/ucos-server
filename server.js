@@ -16,7 +16,7 @@ mongoose
     console.log("database connection failed");
   });
 
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+app.use(cors());
 app.use(express.static("public"));
 app.use(cookieParser());
 
